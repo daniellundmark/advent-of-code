@@ -29,7 +29,7 @@ fun part2(numbers: List<Long>) {
         for(j in i+1 until numbers.size) {
             val sublist = numbers.subList(i, j)
             if(sublist.sum() == target) {
-                println("$i, $j, ${sublist.min()}, ${sublist.max()}")
+                println("$i, $j, ${sublist.minOrNull()}, ${sublist.maxOrNull()}")
 
                 return
             }

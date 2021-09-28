@@ -9,6 +9,7 @@ Progress so far:
 | Year | Stars | Dates |
 | --- | --- | --- |
 | 2020 | :star: :star: | 01 - 25 |
-| 2019 | :star: :star: | 01 - 15 |
 | 2019 | :star: | 16 |
+| 2019 | :star: :star: | 01 - 15 |
+| 2018 | :star: :star: | 01 - 02 |
 
