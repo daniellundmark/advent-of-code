@@ -53,6 +53,10 @@ infix fun Long.mod(m: Long): Long {
     return if (r < 0) r + m else r
 }
 
+fun <T> Collection<T>.peek(function: (T) -> Unit): Collection<T> {
+    return this.map { function.invoke(it); it }
+}
+
 fun <T, S> Collection<T>.cartesianProduct(other: Iterable<S>): List<Pair<T, S>> {
     return cartesianProduct(other) { first, second -> first to second }
 }
@@ -151,5 +155,16 @@ fun BigInteger.primeFactors(): List<Pair<BigInteger, Int>> {
 data class Point(val x: Int, val y: Int) {
     override fun toString(): String {
         return "($x,$y)"
+    }
+}
+
+fun min(a: Int, b: Int) = if(a < b) a else b
+fun max(a: Int, b: Int) = if(a > b) a else b
+
+
+var showDebug = false
+fun debug(msg: Any) {
+    if (showDebug) {
+        println(msg)
     }
 }
