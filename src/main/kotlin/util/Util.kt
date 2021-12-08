@@ -161,6 +161,7 @@ data class Point(val x: Int, val y: Int) {
 fun min(a: Int, b: Int) = if(a < b) a else b
 fun max(a: Int, b: Int) = if(a > b) a else b
 
+fun String.splitOnWhitespace() = this.trim().split(Regex("\\s+"))
 
 var showDebug = false
 fun debug(msg: Any) {
