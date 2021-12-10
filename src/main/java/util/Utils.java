@@ -16,7 +16,7 @@ public class Utils {
     public static List<String> readInput(String fileName) {
 
         try {
-            return Files.readAllLines(Paths.get("src/main/resources/"+fileName), StandardCharsets.UTF_8);
+            return Files.readAllLines(Paths.get("resources/"+fileName), StandardCharsets.UTF_8);
         } catch (IOException e) {
             throw new RuntimeException("Failed to read file="+fileName, e);
         }
