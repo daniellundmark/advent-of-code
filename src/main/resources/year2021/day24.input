@@ -1,0 +1,252 @@
+inp w
+mul x 0
+add x z
+mod x 26
+div z 1 // z is 0
+add x 13
+eql x w
+eql x 0 // x is 1
+mul y 0
+add y 25 // y is 25
+mul y x
+add y 1 // y is 26
+mul z y // z is 0
+mul y 0
+add y w
+add y 8 // y is input + 8
+mul y x // y is input + 8
+add z y // z is input[0] + 8
+inp w
+mul x 0
+add x z
+mod x 26 // x is (input[0] + 8) % 26
+div z 1
+add x 12
+eql x w // x must be 0, as it was add x 12
+eql x 0 // x is 1
+mul y 0
+add y 25
+mul y x
+add y 1 // y is 26
+mul z y // z is (input[0] + 8) % 26 * 26
+mul y 0
+add y w // y is input[1]
+add y 16
+mul y x // y is (input[1] + 16) * 1
+add z y // z is (input[0] + 8) % 26 * 26 + (input[1] + 16)
+inp w   // w is input[2]
+mul x 0
+add x z // x is  (input[0] + 8) * 26 + (input[1] + 16)
+mod x 26 // x is ( (input[0] + 8) * 26 + (input[1] + 16)) % 26
+div z 1
+add x 10
+eql x w
+eql x 0 // x is 1
+mul y 0
+add y 25
+mul y x
+add y 1 // y is 26
+mul z y  // z is ((input[0] + 8) % 26 * 26 + (input[1] + 16)) % 26 * 26
+mul y 0
+add y w
+add y 4 // y is input[2] + 4
+mul y x // y is input[2] + 4
+add z y // z is ((input[0] + 8) % 26 * 26 + (input[1] + 16)) % 26 * 26 + (input[2] + 4)
+inp w   // w is input[3]
+mul x 0
+add x z
+mod x 26 // x is ((input[0] + 8) % 26 * 26 + (input[1] + 16)) % 26 * 26 + (input[2] + 4) % 26
+div z 26 // z is ((input[0] + 8) % 26 * 26 + (input[1] + 16)) % 26 * 26 + (input[2] + 4) / 26
+add x -11 // x is ((input[0] + 8) % 26 * 26 + (input[1] + 16)) % 26 * 26 + (input[2] + 4) % 26 - 11
+eql x w // x _can_ be 1 --> ((input[0] + 8) % 26 * 26 + (input[1] + 16)) % 26 * 26 + (input[2] + 4) % 26 = input[3] + 11 = 20
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 1
+mul y x
+add z y
+inp w
+mul x 0
+add x z
+mod x 26
+div z 1
+add x 14
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 13
+mul y x
+add z y
+inp w
+mul x 0
+add x z
+mod x 26
+div z 1
+add x 13
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 5
+mul y x
+add z y
+inp w
+mul x 0
+add x z
+mod x 26
+div z 1
+add x 12
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 0
+mul y x
+add z y
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26
+add x -5
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 10
+mul y x
+add z y
+inp w
+mul x 0
+add x z
+mod x 26
+div z 1
+add x 10
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 7
+mul y x
+add z y
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26
+add x 0
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 2
+mul y x
+add z y
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26
+add x -11
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 13
+mul y x
+add z y
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26
+add x -13
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 15
+mul y x
+add z y
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26
+add x -13
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 14
+mul y x
+add z y
+inp w
+mul x 0
+add x z
+mod x 26 // x: p%26
+div z 26 // z: p/26
+add x -11 // x: p%26 - 11
+eql x w //
+eql x 0
+mul y 0 // y: 0
+add y 25 //y: 25
+mul y x // y: 25 eller 0
+add y 1 // y: 26 eller 1
+mul z y // z: p/26*26 eller p/26
+mul y 0
+add y w // y: input
+add y 9 // y: input+9
+mul y x // y: (input+9)*x
+add z y
